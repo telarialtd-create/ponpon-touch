@@ -1,0 +1,6 @@
+# 公開しないもの（社内資料・生成原本・試作用）
+docs/
+tools/
+assets/raw/
+artifact_page.html
+.DS_Store

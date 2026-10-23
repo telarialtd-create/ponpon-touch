@@ -1,0 +1,10 @@
+{
+  "name": "ぽんぽんタッチ",
+  "short_name": "ぽんぽんタッチ",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#bfe6ff",
+  "theme_color": "#bfe6ff",
+  "icons": [{ "src": "assets/icon.png", "sizes": "512x512", "type": "image/png" }]
+}

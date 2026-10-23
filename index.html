@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ぽんぽんタッチ">
+<meta name="theme-color" content="#bfe6ff">
+<title>ぽんぽんタッチ</title>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <!-- タイトル画面 -->
+  <section id="title" class="screen">
+    <img class="bg" src="assets/title.jpg" alt="">
+    <div class="title-buttons">
+      <button id="btn-play" class="big-btn">あそぶ</button>
+    </div>
+  </section>
+
+  <!-- 遊び画面 -->
+  <section id="play" class="screen hidden">
+    <div id="stage"></div>
+    <header id="topbar">
+      <button id="btn-home" class="mini" aria-label="ホーム">⌂</button>
+      <button id="btn-settings" class="mini" aria-label="設定">⚙</button>
+      <button id="btn-change" class="tab red"><span class="ico">⟳</span>ちぇんじ</button>
+      <button id="btn-pick" class="tab blue"><span class="ico">▦</span>えらぶ</button>
+      <button id="btn-fav" class="mini heart" aria-label="おきにいり">♡</button>
+    </header>
+  </section>
+
+  <!-- えらぶ -->
+  <div id="picker" class="modal hidden">
+    <div class="card">
+      <button class="close" data-close>×</button>
+      <h2>えらんでね</h2>
+      <div id="picker-grid"></div>
+    </div>
+  </div>
+
+  <!-- 設定 -->
+  <div id="settings" class="modal hidden">
+    <div class="card">
+      <button class="close" data-close>×</button>
+      <h2>せってい</h2>
+      <label class="row"><span>おんがく</span><input type="checkbox" id="opt-bgm" checked></label>
+      <label class="row"><span>こうかおん</span><input type="checkbox" id="opt-se" checked></label>
+    </div>
+  </div>
+</div>
+<script src="sound.js"></script>
+<script src="app.js"></script>
+<script src="scenes2.js"></script>
+</body>
+</html>
