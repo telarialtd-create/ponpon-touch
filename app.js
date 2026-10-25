@@ -243,6 +243,7 @@ function show(name) {
   const stage = $('#stage'); stage.innerHTML = '';
   current = name;
   SCENES[name].mount(stage);
+  Stats.start(name);
   Sound.bgmPlay(name);
   $('#btn-fav').classList.toggle('on', favs.includes(name));
   $('#btn-fav').textContent = favs.includes(name) ? '♥' : '♡';
@@ -264,7 +265,7 @@ $('#play').addEventListener('pointerdown', () => Sound.init(), true);
 $('#btn-home').addEventListener('click', () => {
   Sound.play('tap');
   if (current) SCENES[current].unmount();
-  current = null; Sound.bgmStop();
+  current = null; Sound.bgmStop(); Stats.stop();
   $('#play').classList.add('hidden'); $('#title').classList.remove('hidden');
 });
 $('#btn-change').addEventListener('click', () => {
